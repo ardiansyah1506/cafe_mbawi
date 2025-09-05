@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Mbawiewok - Bio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            50: '#fdf2f2',
+                            100: '#fce7e7',
+                            200: '#f9d5d5',
+                            300: '#f4b5b5',
+                            400: '#ec8888',
+                            500: '#e15d5d',
+                            600: '#cd3f3f',
+                            700: '#ab2f2f',
+                            800: '#8f2929',
+                            900: '#7a2828',
+                            950: '#421111',
+                        },
+                        cream: {
+                            50: '#fefdf9',
+                            100: '#fef7ed',
+                            200: '#fdefd5',
+                            300: '#fbe2b4',
+                            400: '#f7cc82',
+                            500: '#f3b757',
+                            600: '#eda441',
+                            700: '#dc8b2f',
+                            800: '#b8702a',
+                            900: '#955d26',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Cormorant Garamond', 'serif'],
+                        'elegant': ['Crimson Text', 'serif'], 
+                        'modern': ['Poppins', 'sans-serif'],
+                        'script': ['Dancing Script', 'cursive'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 4s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'shimmer': 'shimmer 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(2deg)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(205, 63, 63, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(205, 63, 63, 0.6)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #8f2929, #cd3f3f, #f59e0b, #e15d5d);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+        
+        .shadow-elegant {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 
+                        0 12px 24px rgba(0, 0, 0, 0.08),
+                        0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-hover-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease-in-out;
+        }
+        
+        .btn-hover-effect:hover::before {
+            left: 100%;
+        }
+
+        .text-shadow-elegant {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+        }
+
+        .border-gradient {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #cd3f3f, #f59e0b, #e15d5d) border-box;
+        }
+
+        .quote-decoration::before,
+        .quote-decoration::after {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(205, 63, 63, 0.3);
+            position: absolute;
+        }
+
+        .quote-decoration::before {
+            top: -10px;
+            left: -15px;
+        }
+
+        .quote-decoration::after {
+            bottom: -25px;
+            right: -15px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cream-50 via-white to-maroon-50 min-h-screen py-8 px-4 font-modern">
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-maroon-200 to-gold-200 rounded-full opacity-15 animate-float blur-sm"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-gold-300 to-maroon-300 rounded-full opacity-12 animate-float blur-sm" style="animation-delay: 1.5s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-maroon-400 to-cream-400 rounded-full opacity-10 animate-float blur-sm" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-gradient-to-br from-gold-400 to-maroon-200 rounded-full opacity-8 animate-float blur-sm" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="max-w-md mx-auto relative z-10">
+        <div class="text-center mb-12 animate-fade-in">
+            <div class="w-44 h-44 mx-auto mb-6 glass-effect  flex items-center justify-center animate-float">
+                <img src="logo.png" alt="Cafe Mbawiewok Logo" class="object-cover ">
+            </div>
+            <h1 class="text-5xl font-display font-bold gradient-text mb-2 animate-slide-up text-shadow-elegant tracking-wide">Cafe Mbawiewok</h1>
+            <div class="mb-6 animate-slide-up" style="animation-delay: 0.1s;">
+                <p class="text-maroon-600 font-script text-xl font-semibold">Cita Rasa Autentik Nusantara</p>
+            </div>
+            <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-elegant animate-slide-up border-gradient relative" style="animation-delay: 0.2s;">
+                <div class="relative quote-decoration">
+                    <p class="text-maroon-800 text-lg font-elegant leading-relaxed italic font-medium">
+                        Rawon & soto juara, tapi menu lain juga ngga kalah menggoda
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6 mb-10">
+            <a href="menu.pdf" target="_blank" 
+               class="relative w-full bg-gradient-to-r from-maroon-500 via-maroon-600 to-maroon-700 hover:from-maroon-600 hover:via-maroon-700 hover:to-maroon-800 
+                      text-white font-modern font-semibold py-6 px-10 rounded-3xl shadow-elegant transition-all duration-500 
+                      transform hover:scale-105 hover:-translate-y-2 flex items-center justify-center btn-hover-effect animate-slide-up group"
+               style="animation-delay: 0.3s;">
+                
+                <i class="fas fa-eye text-2xl absolute left-10 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="text-lg font-medium tracking-wide">Lihat Menu Spesial</span>
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+            </a>
+        
+            <a href="https://instagram.com/cafe_mbawiewok" target="_blank" 
+               class="relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 hover:from-pink-600 hover:via-purple-600 hover:to-purple-700 
+                      text-white font-modern font-semibold py-6 px-10 rounded-3xl shadow-elegant transition-all duration-500 
+                      transform hover:scale-105 hover:-translate-y-2 flex items-center justify-center btn-hover-effect animate-slide-up group"
+               style="animation-delay: 0.4s;">
+                
+                <i class="fab fa-instagram text-2xl absolute left-10 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="text-lg font-medium tracking-wide">Follow Instagram Kami</span>
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+            </a>
+        
+            <a href="https://wa.me/6281229695059?text=Halo%20Cafe%20Mbawiewok,%20saya%20ingin%20bertanya%20tentang%20menu" 
+               target="_blank" 
+               class="relative w-full bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 hover:from-green-600 hover:via-green-700 hover:to-emerald-700 
+                      text-white font-modern font-semibold py-6 px-10 rounded-3xl shadow-elegant transition-all duration-500 
+                      transform hover:scale-105 hover:-translate-y-2 flex items-center justify-center btn-hover-effect animate-slide-up group"
+               style="animation-delay: 0.5s;">
+                
+                <i class="fab fa-whatsapp text-2xl absolute left-10 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="text-lg font-medium tracking-wide">Chat WhatsApp</span>
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+            </a>
+        
+            <a href="https://maps.app.goo.gl/c5y3bYqQUvt7X42e8" target="_blank" 
+               class="relative w-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-blue-700 hover:to-indigo-700 
+                      text-white font-modern font-semibold py-6 px-10 rounded-3xl shadow-elegant transition-all duration-500 
+                      transform hover:scale-105 hover:-translate-y-2 flex items-center justify-center btn-hover-effect animate-slide-up group"
+               style="animation-delay: 0.6s;">
+                
+                <i class="fas fa-map-marker-alt text-2xl absolute left-10 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="text-lg font-medium tracking-wide">Lihat Lokasi di Maps</span>
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+            </a>
+        </div>
+
+        <div class="text-center animate-fade-in" style="animation-delay: 0.7s;">
+            <div class="bg-gradient-to-r from-white/50 to-cream-100/60 backdrop-blur-sm rounded-3xl p-6 shadow-elegant border border-white/30">
+                <p class="text-maroon-700 font-elegant font-medium text-base mb-2">
+                    <i class="fas fa-heart text-maroon-500 mr-2 animate-pulse"></i>
+                    Dibuat dengan cinta untuk pelanggan setia
+                </p>
+                <p class="text-maroon-600 font-script text-sm">
+                    Nikmati kelezatan tradisional dengan sentuhan modern
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuItems = document.getElementById('menuItems');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (menuItems && menuItems.classList.contains('hidden')) {
+                menuItems.classList.remove('hidden');
+                if (menuIcon) menuIcon.style.transform = 'rotate(180deg)';
+            } else if (menuItems) {
+                menuItems.classList.add('hidden');
+                if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(40px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.animate-float');
+                parallaxElements.forEach((el, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    el.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
